@@ -34,7 +34,7 @@ function SignOut(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={(e) => {e.preventDefault(); props.handleSignOut()}}
+            onClick={(e) => {props.handleSignOut(e)}}
           >
             <ExitToApp />
             Sign Out

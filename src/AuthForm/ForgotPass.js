@@ -44,7 +44,7 @@ export default function SignIn(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={(e) => {props.handleForgotPass()}}
+            onClick={(e) => {props.handleForgotPass(e)}}
           >
           Forgot password
           </Button>
