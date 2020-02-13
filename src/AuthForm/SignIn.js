@@ -14,7 +14,6 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 import { useStyles, Copyright } from './common'
-import {SIGNUP, FORGOTPASS} from './Auth';
 
 export default function SignIn(props) {
   const classes = useStyles();
@@ -68,12 +67,12 @@ export default function SignIn(props) {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link onClick={(e) => props.handleSwitchForm(e, FORGOTPASS)} variant="body2" style={{cursor: 'pointer'}}>
+              <Link onClick={(e) => props.handleSwitchForm(e, 'ForgotPass')} variant="body2" style={{cursor: 'pointer'}}>
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link onClick={(e) => props.handleSwitchForm(e, SIGNUP)} variant="body2" style={{cursor: 'pointer'}}>
+              <Link onClick={(e) => props.handleSwitchForm(e, 'SignUp')} variant="body2" style={{cursor: 'pointer'}}>
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
