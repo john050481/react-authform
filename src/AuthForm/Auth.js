@@ -14,7 +14,7 @@ function Auth(props) {
   };
 
   if (props.isAuth) {
-    return <SignOut handleSignOut={props.handleSignOut}/>;
+    return <SignOut        handleSignOut={props.handleSignOut}/>;
   } else {
     switch (switchForm) {
       case 'SignIn':
