@@ -62,7 +62,7 @@ export default function SignIn(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={(e) => {e.preventDefault(); props.handleSignIn()}}
+            onClick={(e) => {props.handleSignIn()}}
           >
             Sign In
           </Button>
