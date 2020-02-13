@@ -26,7 +26,6 @@ function SignOut(props) {
           Sign Out
         </Typography>
         <Typography variant="body2" color="textSecondary" align="center">
-          Вы вошли как <b>{props.username}</b>
         </Typography>
         <form className={classes.form} noValidate>
           <Button
@@ -50,8 +49,7 @@ function SignOut(props) {
 }
 
 SignOut.propTypes = {
-  username: PropTypes.string.isRequired,
-  handleSignOut: PropTypes.func.isRequired,
+  handleSignOut: PropTypes.func.isRequired
 };
 
 export default SignOut;
