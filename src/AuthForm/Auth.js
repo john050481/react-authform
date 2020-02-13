@@ -1,13 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-//---import { connect } from 'react-redux';
 
 import SignIn from './SignIn.js';
 import SignUp from './SignUp.js';
 import SignOut from './SignOut.js';
 import ForgotPass from './ForgotPass.js';
-
-//---import {setUser, setUserInit} from 'store/user/actions.js';
 
 export const SIGNIN     = 'SIGNIN';
 export const SIGNUP     = 'SIGNUP';
@@ -21,73 +18,31 @@ function Auth(props) {
     setSwitchForm(formName);
   };
 
-  function handleSignIn(e) {
-    props.setUser('user', '123456');
-    //window.location = '/admin/dashboard'
-  };
-
-  function handleSignUp(e) { };
-
-  function handleSignOut(e) {
-    props.setUserInit();
-  };
-
-  function handleForgotPass(e) { };
-
   if (props.isAuth) {
-    return <SignOut handleSignOut={handleSignOut}/>;
+    return <SignOut handleSignOut={props.handleSignOut}/>;
   } else {
     switch (switchForm) {
       case SIGNIN:
-        return <SignIn     handleSwitchForm={handleSwitchForm} handleSignIn={handleSignIn} />
+        return <SignIn     handleSwitchForm={handleSwitchForm} handleSignIn={props.handleSignIn} />
       case SIGNUP:
-        return <SignUp     handleSwitchForm={handleSwitchForm} handleSignUp={handleSignUp}/>
+        return <SignUp     handleSwitchForm={handleSwitchForm} handleSignUp={props.handleSignUp}/>
       case FORGOTPASS:
-        return <ForgotPass handleSwitchForm={handleSwitchForm} handleForgotPass={handleForgotPass}/>
+        return <ForgotPass handleSwitchForm={handleSwitchForm} handleForgotPass={props.handleForgotPass}/>
       default:
         return null
     }
   }
 }
 
-//---
-/*
-const mapStateToProps = (state) => (
-  {
-    isAuth: Boolean(state.user.isAuth)
-  }
-);
-
-
-const mapDispatchToProps = (dispatch) => (
-  {
-        setUser : (username, userId) => dispatch(setUser(username, userId)),
-        setUserInit: () => dispatch(setUserInit()),
-  }
-);
-*/
-
 Auth.propTypes = {
   isAuth: PropTypes.bool.isRequired,
-  setUser: PropTypes.func.isRequired,
-  setUserInit: PropTypes.func.isRequired,
-/*---
-handleSignIn
-handleSignUp
-handleForgotPass
-handleSignOut
-*/
+  handleSignIn: PropTypes.func.isRequired,
+  handleSignUp: PropTypes.func.isRequired,
+  handleForgotPass: PropTypes.func.isRequired,
+  handleSignOut: PropTypes.func.isRequired
 };
 Auth.defaultProps = {
-  isAuth: false,
-  setUser: () => {},
-  setUserInit: () => {},
-/*---
-handleSignIn
-handleSignUp
-handleForgotPass
-handleSignOut
-*/
+  isAuth: false
 };
-//---export default connect(mapStateToProps, mapDispatchToProps)(Auth);
+
 export default Auth;

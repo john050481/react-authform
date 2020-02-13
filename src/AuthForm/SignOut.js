@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-//---import { connect } from 'react-redux';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -50,19 +49,9 @@ function SignOut(props) {
   );
 }
 
-//---
-/*
-const mapStateToProps = (state) => (
-  {
-    username: state.user.username
-  }
-);
-*/
-
 SignOut.propTypes = {
   username: PropTypes.string.isRequired,
   handleSignOut: PropTypes.func.isRequired,
 };
 
-//---export default connect(mapStateToProps)(SignOut);
 export default SignOut;
