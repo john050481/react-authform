@@ -16,7 +16,6 @@ const RequireAuth = (WrappedComponent, redirect=true) => {
         if (!redirect) return null;
         return <Redirect to='/admin/auth' />;
       }
-
       return <WrappedComponent {...this.props}/>;
     }
   }
@@ -26,7 +25,6 @@ const RequireAuth = (WrappedComponent, redirect=true) => {
       isAuth: Boolean(state.user.isAuth)
     }
   );
-
   return connect(mapStateToProps)(WithAuthorization);
 };
 
