@@ -45,7 +45,7 @@ AuthForm.propTypes = {
     }
   }
 ```
-## Есть несколько тестов:
+## Тесты:
 ```bash
 npm test
 ```
