@@ -21,14 +21,29 @@ SignUp.js
 ForgotPass.js
 ```
 ## Пропсы AuthForm:
+Предаются из Вашего кода:
 ```js
 AuthForm.propTypes = {
   isAuth: PropTypes.bool.isRequired,            /*признак авторизации*/
-  handleSignIn: PropTypes.func.isRequired,      /*колбек при входе*/
-  handleSignUp: PropTypes.func.isRequired,      /*колбек при регистрации*/
-  handleForgotPass: PropTypes.func.isRequired,  /*колбек при забытии пароля*/
-  handleSignOut: PropTypes.func.isRequired      /*колбек при выходе*/
+  handleSignIn: PropTypes.func.isRequired,      /*коллбэк при входе*/
+  handleSignUp: PropTypes.func.isRequired,      /*коллбэк при регистрации*/
+  handleForgotPass: PropTypes.func.isRequired,  /*коллбэк при забытии пароля*/
+  handleSignOut: PropTypes.func.isRequired      /*коллбэк при выходе*/
 };
+```
+В качестве примера коллбэк, который выдает пары (ключ, значения) инпутов формы:
+```js
+  handleSignIn: (e) => {
+    e.preventDefault();
+
+    let form = e.currentTarget.form;
+    if (form) {
+      let data = new FormData(form);
+      for(let pair of data.entries()) {
+        console.log(pair[0]+ ', '+ pair[1]);
+      }
+    }
+  }
 ```
 ## Бонус, компонент который проверяет аутентификацию:
 ```
