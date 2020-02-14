@@ -58,7 +58,7 @@ handleSignIn: (e) => {
     }
   }
 }
-//Выведет в консоли:
+//Выведет в консоли то, что ввел пользователь:
 email: email@corp.ru
 password: anypass
 remember: remember //если выставлена галочка 'запомнить' 
