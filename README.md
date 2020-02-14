@@ -61,7 +61,7 @@ handleSignIn: (e) => {
 //Выведет в консоли:
 email: email@corp.ru
 password: anypass
-remember: remember
+remember: remember //если выставлена галочка 'запомнить' 
 ```
 ## Тесты:
 ```bash
