@@ -39,6 +39,7 @@ AuthForm.propTypes = {
 AuthForm.defaultProps = {
   isAuth: false,
   handleSignIn: (e) => {
+    /* ************ for example
     e.preventDefault();
 
     let form = e.currentTarget.form;
@@ -48,6 +49,7 @@ AuthForm.defaultProps = {
         console.log(pair[0]+ ': '+ pair[1]);
       }
     }
+   */
   },
   handleSignUp: (e) => {
     /* ************ for example
