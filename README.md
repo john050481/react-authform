@@ -15,6 +15,9 @@ npm start
 ```
 AuthForm.js  /*Нужно подключить и прокинуть свои пропсы*/
 ```
+```js
+import AuthForm from './AuthForm/AuthForm';
+```
 ```jsx
 <AuthForm 
   isAuth={isAuth}
