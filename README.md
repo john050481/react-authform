@@ -47,17 +47,17 @@ AuthForm.propTypes = {
 ```
 В качестве примера коллбэк ```handleSignIn```, который выдает пары (ключ, значения) инпутов формы:
 ```js
-  handleSignIn: (e) => {
-    e.preventDefault();
+handleSignIn: (e) => {
+  e.preventDefault();
 
-    let form = e.currentTarget.form;
-    if (form) {
-      let data = new FormData(form);
-      for(let pair of data.entries()) {
-        console.log(pair[0]+ ': '+ pair[1]);
-      }
+  let form = e.currentTarget.form;
+  if (form) {
+    let data = new FormData(form);
+    for(let pair of data.entries()) {
+      console.log(pair[0]+ ': '+ pair[1]);
     }
   }
+}
 //Выведет в консоли:
 email: email@corp.ru
 password: anypass
