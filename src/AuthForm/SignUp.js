@@ -96,7 +96,7 @@ export default function SignUp(props) {
           <Grid container justify="flex-end">
             <Grid item>
               <Link onClick={(e) => props.handleSwitchForm(e, 'SignIn')} variant="body2" style={{cursor: 'pointer'}}>
-                Already have an account? Sign in
+                {"Already have an account? Sign in"}
               </Link>
             </Grid>
           </Grid>

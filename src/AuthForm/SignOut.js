@@ -12,7 +12,7 @@ import ExitToApp from '@material-ui/icons/ExitToApp';
 
 import { useStyles, Copyright } from './common'
 
-function SignOut(props) {
+export default function SignOut(props) {
   const classes = useStyles();
 
   return (
@@ -51,5 +51,3 @@ function SignOut(props) {
 SignOut.propTypes = {
   handleSignOut: PropTypes.func.isRequired
 };
-
-export default SignOut;
