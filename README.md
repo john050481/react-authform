@@ -1,6 +1,7 @@
 # Authentications form: React + @material-ui
 Компоненте формы аутентификации (логин, регистрация, вспомнить пароль, выход).
 <br>Использовался: [material-ui](https://material-ui.com/ru/).
+![demo](https://github.com/john050481/react-authform/blob/master/demo/All.jpg)
 
 # Getting started
 ```bash
