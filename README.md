@@ -5,20 +5,31 @@
 # Getting started
 ```bash
 # via npm
+git clone https://github.com/john050481/react-authform.git
+cd react-authform
 npm i
 npm start
 ```
 # Основные моменты
 ## Основной компонент:
 ```
-AuthForm.js
+AuthForm.js  /*Нужно подключить и прокинуть свои пропсы*/
+```
+```jsx
+<AuthForm 
+  isAuth={isAuth}
+  handleSignIn={...}
+  handleSignUp={...}
+  handleForgotPass={...}
+  handleSignOut={...}
+/>
 ```
 ## Четыре формы: 
 ```
-SignIn.js
-SignOut.js
-SignUp.js
-ForgotPass.js
+SignIn.js      /*Вход*/
+SignOut.js     /*Выход*/
+SignUp.js      /*Регистрация*/
+ForgotPass.js  /*Забытый пароль*/
 ```
 ## Пропсы AuthForm:
 Предаются из Вашего кода:
