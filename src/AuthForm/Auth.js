@@ -38,10 +38,34 @@ Auth.propTypes = {
 };
 Auth.defaultProps = {
   isAuth: false,
-  handleSignIn: () => {},
-  handleSignUp: () => {},
-  handleForgotPass: () => {},
-  handleSignOut: () => {}
+  handleSignIn: (e) => {
+    /* for example
+    e.preventDefault();
+
+    let form = e.currentTarget.form;
+    if (form) {
+      let data = new FormData(form);
+      for(let pair of data.entries()) {
+        console.log(pair[0]+ ', '+ pair[1]);
+      }
+    }
+    */
+  },
+  handleSignUp: (e) => {
+    /* for example
+    e.preventDefault();
+
+    let form = e.currentTarget.form;
+    if (form) {
+      let data = new FormData(form);
+      for(let pair of data.entries()) {
+        console.log(pair[0]+ ', '+ pair[1]);
+      }
+    }
+    */
+  },
+  handleForgotPass: (e) => {},
+  handleSignOut: (e) => {}
 };
 
 export default Auth;
