@@ -45,7 +45,7 @@ AuthForm.propTypes = {
   handleSignOut: PropTypes.func.isRequired      /*коллбэк при выходе*/
 };
 ```
-В качестве примера коллбэк, который выдает пары (ключ, значения) инпутов формы:
+В качестве примера коллбэк ```handleSignIn```, который выдает пары (ключ, значения) инпутов формы:
 ```js
   handleSignIn: (e) => {
     e.preventDefault();
