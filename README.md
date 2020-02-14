@@ -41,7 +41,7 @@ AuthForm.propTypes = {
   isAuth: PropTypes.bool.isRequired,            /*признак авторизации*/
   handleSignIn: PropTypes.func.isRequired,      /*коллбэк при входе*/
   handleSignUp: PropTypes.func.isRequired,      /*коллбэк при регистрации*/
-  handleForgotPass: PropTypes.func.isRequired,  /*коллбэк при забытии пароля*/
+  handleForgotPass: PropTypes.func.isRequired,  /*коллбэк при забытом пароле*/
   handleSignOut: PropTypes.func.isRequired      /*коллбэк при выходе*/
 };
 ```
