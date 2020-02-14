@@ -6,7 +6,7 @@ import SignUp from './SignUp.js';
 import SignOut from './SignOut.js';
 import ForgotPass from './ForgotPass.js';
 
-function Auth(props) {
+function AuthForm(props) {
   const [switchForm, setSwitchForm] = React.useState('SignIn');
 
   function handleSwitchForm(e, formName) {
@@ -29,14 +29,14 @@ function Auth(props) {
   }
 }
 
-Auth.propTypes = {
+AuthForm.propTypes = {
   isAuth: PropTypes.bool.isRequired,
   handleSignIn: PropTypes.func.isRequired,
   handleSignUp: PropTypes.func.isRequired,
   handleForgotPass: PropTypes.func.isRequired,
   handleSignOut: PropTypes.func.isRequired
 };
-Auth.defaultProps = {
+AuthForm.defaultProps = {
   isAuth: false,
   handleSignIn: (e) => {
     /* ************ for example
@@ -68,4 +68,4 @@ Auth.defaultProps = {
   handleSignOut: (e) => {}
 };
 
-export default Auth;
+export default AuthForm;
