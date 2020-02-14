@@ -35,7 +35,7 @@ SignUp.js      /*Регистрация*/
 ForgotPass.js  /*Забытый пароль*/
 ```
 ## Пропсы AuthForm:
-Предаются из Вашего кода:
+Передаются из Вашего кода:
 ```js
 AuthForm.propTypes = {
   isAuth: PropTypes.bool.isRequired,            /*признак авторизации*/
