@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Auth from './AuthForm/Auth';
+import Auth from './AuthForm/AuthForm';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Auth />, document.getElementById('root'));
