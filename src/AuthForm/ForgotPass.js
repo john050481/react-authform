@@ -66,5 +66,5 @@ export default function SignIn(props) {
 
 SignIn.propTypes = {
   handleForgotPass: PropTypes.func.isRequired,
-  handleSwitchForm: PropTypes.func.isRequired,
+  handleSwitchForm: PropTypes.func.isRequired
 };

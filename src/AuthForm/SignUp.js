@@ -110,5 +110,6 @@ export default function SignUp(props) {
 }
 
 SignUp.propTypes = {
-  handleSwitchForm: PropTypes.func.isRequired,
+  handleSignUp: PropTypes.func.isRequired,
+  handleSwitchForm: PropTypes.func.isRequired
 };
