@@ -58,6 +58,10 @@ AuthForm.propTypes = {
       }
     }
   }
+//Выведет в консоли:
+<br>email: email@corp.ru
+<br>password: anypass
+<br>remember: remember
 ```
 ## Тесты:
 ```bash

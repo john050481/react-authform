@@ -39,17 +39,15 @@ AuthForm.propTypes = {
 AuthForm.defaultProps = {
   isAuth: false,
   handleSignIn: (e) => {
-    /* ************ for example
     e.preventDefault();
 
     let form = e.currentTarget.form;
     if (form) {
       let data = new FormData(form);
       for(let pair of data.entries()) {
-        console.log(pair[0]+ ', '+ pair[1]);
+        console.log(pair[0]+ ': '+ pair[1]);
       }
     }
-    */
   },
   handleSignUp: (e) => {
     /* ************ for example
@@ -59,7 +57,7 @@ AuthForm.defaultProps = {
     if (form) {
       let data = new FormData(form);
       for(let pair of data.entries()) {
-        console.log(pair[0]+ ', '+ pair[1]);
+        console.log(pair[0]+ ': '+ pair[1]);
       }
     }
     */
