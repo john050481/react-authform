@@ -11,10 +11,8 @@ npm i
 npm start
 ```
 # Основные моменты
-## Основной компонент:
-```
-AuthForm.js  /*Нужно подключить и прокинуть свои пропсы*/
-```
+## Основной компонент ```AuthForm.js```:
+Подключаем и прокидываем свои пропсы
 ```js
 import AuthForm from './AuthForm/AuthForm';
 ```
@@ -45,7 +43,7 @@ AuthForm.propTypes = {
   handleSignOut: PropTypes.func.isRequired      /*коллбэк при выходе*/
 };
 ```
-В качестве примера коллбэк ```handleSignIn```, который выдает пары (ключ, значения) инпутов формы:
+В качестве примера коллбэк ```handleSignIn```, который выдает пары (ключ: значение) инпутов формы:
 ```js
 handleSignIn: (e) => {
   e.preventDefault();
