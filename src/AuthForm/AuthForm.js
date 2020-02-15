@@ -51,19 +51,7 @@ AuthForm.defaultProps = {
     }
    */
   },
-  handleSignUp: (e) => {
-    /* ************ for example
-    e.preventDefault();
-
-    let form = e.currentTarget.form;
-    if (form) {
-      let data = new FormData(form);
-      for(let pair of data.entries()) {
-        console.log(pair[0]+ ': '+ pair[1]);
-      }
-    }
-    */
-  },
+  handleSignUp: (e) => {},
   handleForgotPass: (e) => {},
   handleSignOut: (e) => {}
 };
