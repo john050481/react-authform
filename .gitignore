@@ -10,6 +10,9 @@
 # testing
 /coverage
 
+# temp
+/temp
+
 # production
 /build
 
