@@ -2,7 +2,7 @@
 Компоненте формы аутентификации (логин, регистрация, вспомнить пароль, выход).
 <br>Использовался: [material-ui](https://material-ui.com/ru/).
 <br>[Demo codesandbox.io](https://codesandbox.io/s/github/john050481/react-authform)
-<br>![Demo picks](https://github.com/john050481/react-authform/blob/master/demo/All.jpg)
+<br>![Demo picks](https://github.com/john050481/react-authform/blob/master/demo_img/All.jpg)
 
 # Getting started
 ```bash
