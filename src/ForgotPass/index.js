@@ -4,8 +4,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -13,7 +11,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-import { useStyles, Copyright } from './Common'
+import { useStyles, Copyright } from '.././Common'
 
 export default function SignIn(props) {
   const classes = useStyles();
@@ -26,7 +24,7 @@ export default function SignIn(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Forgot password
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -40,40 +38,20 @@ export default function SignIn(props) {
             autoComplete="email"
             autoFocus
           />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox name="remember" value="remember" color="primary" />}
-            label="Remember me"
-          />
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={(e) => {props.handleSignIn(e)}}
+            onClick={(e) => {props.handleForgotPass(e)}}
           >
-            Sign In
+          Forgot password
           </Button>
           <Grid container>
-            <Grid item xs>
-              <Link onClick={(e) => props.handleSwitchForm(e, 'ForgotPass')} variant="body2" style={{cursor: 'pointer'}}>
-                Forgot password?
-              </Link>
-            </Grid>
             <Grid item>
-              <Link onClick={(e) => props.handleSwitchForm(e, 'SignUp')} variant="body2" style={{cursor: 'pointer'}}>
-                {"Don't have an account? Sign Up"}
+              <Link onClick={(e) => props.handleSwitchForm(e, 'SignIn')} variant="body2" style={{cursor: 'pointer'}}>
+                {"Already have an account? Sign in"}
               </Link>
             </Grid>
           </Grid>
@@ -87,6 +65,6 @@ export default function SignIn(props) {
 }
 
 SignIn.propTypes = {
-  handleSignIn: PropTypes.func.isRequired,
+  handleForgotPass: PropTypes.func.isRequired,
   handleSwitchForm: PropTypes.func.isRequired
 };

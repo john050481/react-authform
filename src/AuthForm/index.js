@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import SignIn from './SignIn.js';
-import SignUp from './SignUp.js';
-import SignOut from './SignOut.js';
-import ForgotPass from './ForgotPass.js';
+import SignIn from '.././SignIn';
+import SignUp from '.././SignUp';
+import SignOut from '.././SignOut';
+import ForgotPass from '.././ForgotPass';
 
 function AuthForm(props) {
   const [switchForm, setSwitchForm] = React.useState('SignIn');

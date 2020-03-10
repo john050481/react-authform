@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import ExitToApp from '@material-ui/icons/ExitToApp';
 
-import { useStyles, Copyright } from './Common'
+import { useStyles, Copyright } from '.././Common'
 
 export default function SignOut(props) {
   const classes = useStyles();
