@@ -13,7 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-import { useStyles, Copyright } from './common'
+import { useStyles, Copyright } from './Common'
 
 export default function SignUp(props) {
   const classes = useStyles();
