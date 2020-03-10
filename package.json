@@ -30,7 +30,8 @@
     "redux": "^4.0.5"
   },
   "peerDependencies": {
-    "react": "16.x"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.1.1",
