@@ -6,18 +6,20 @@
 
 # Getting started
 ```bash
-# via npm
+# via GIT
 git clone https://github.com/john050481/react-authform.git
 cd react-authform
 npm i
 npm start
 ```
+```bash
+# via NPM (у себя в проекте)
+npm i @john0504/react-authform
+...
+import {AuthForm} from "@john0504/react-authform";
+```
 # Основные моменты
 ## Основной компонент ```AuthForm```:
-Подключаем и прокидываем свои пропсы
-```js
-import AuthForm from './AuthForm';
-```
 ```jsx
 <AuthForm 
   isAuth={isAuth}
@@ -62,10 +64,6 @@ handleSignIn: (e) => {
 email: email@corp.ru
 password: anypass
 remember: remember //если выставлена галочка 'запомнить' 
-```
-## Тесты:
-```bash
-npm test
 ```
 ## Бонус, компонент который проверяет аутентификацию:
 ```
