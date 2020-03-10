@@ -13,10 +13,10 @@ npm i
 npm start
 ```
 # Основные моменты
-## Основной компонент ```AuthForm.js```:
+## Основной компонент ```AuthForm```:
 Подключаем и прокидываем свои пропсы
 ```js
-import AuthForm from './AuthForm/AuthForm';
+import AuthForm from './AuthForm';
 ```
 ```jsx
 <AuthForm 
@@ -29,10 +29,10 @@ import AuthForm from './AuthForm/AuthForm';
 ```
 ## Четыре формы: 
 ```
-SignIn.js      /*Вход*/
-SignOut.js     /*Выход*/
-SignUp.js      /*Регистрация*/
-ForgotPass.js  /*Забытый пароль*/
+SignIn      /*Вход*/
+SignOut     /*Выход*/
+SignUp      /*Регистрация*/
+ForgotPass  /*Забытый пароль*/
 ```
 ## Пропсы AuthForm:
 Передаются из Вашего кода:
@@ -69,7 +69,7 @@ npm test
 ```
 ## Бонус, компонент который проверяет аутентификацию:
 ```
-RequireAuth.js
+RequireAuth
 ```
 Это компонент высшего порядка (Higher-Order Component, HOC).
 <br>Компонент принимает на вход компонент, который должен быть показан только для авторизованного пользователя (используется Redux).
