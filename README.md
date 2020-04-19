@@ -24,7 +24,10 @@ import {AuthForm} from "@john0504/react-authform";
 ```jsx
 <AuthForm 
   isAuth={isAuth}
-  handleSignIn={...}
+  handleSignIn={ (e, formData) => {
+    e.preventDefault(); 
+    console.log('form data = ', formData)
+  }}
   handleSignUp={...}
   handleForgotPass={...}
   handleSignOut={...}
