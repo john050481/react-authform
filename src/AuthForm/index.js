@@ -14,19 +14,34 @@ function AuthForm(props) {
   };
 
   if (props.isAuth) {
-    return <SignOut        handleSignOut={props.handleSignOut}/>;
+    return <SignOut        handleSignOut={(e) => handlerForm(e, props.handleSignOut)}/>;
   } else {
     switch (switchForm) {
       case 'SignIn':
-        return <SignIn     handleSwitchForm={handleSwitchForm} handleSignIn={props.handleSignIn} />
+        return <SignIn     handleSwitchForm={handleSwitchForm} handleSignIn={(e) => handlerForm(e, props.handleSignIn)} />
       case 'SignUp':
-        return <SignUp     handleSwitchForm={handleSwitchForm} handleSignUp={props.handleSignUp}/>
+        return <SignUp     handleSwitchForm={handleSwitchForm} handleSignUp={(e) => handlerForm(e, props.handleSignUp)}/>
       case 'ForgotPass':
-        return <ForgotPass handleSwitchForm={handleSwitchForm} handleForgotPass={props.handleForgotPass}/>
+        return <ForgotPass handleSwitchForm={handleSwitchForm} handleForgotPass={(e) => handlerForm(e, props.handleForgotPass)}/>
       default:
         return null
     }
   }
+}
+
+function handlerForm(e, cb) { //возвращает объект со значениями полей form-ы, и передает их в колбек
+  let form = {};
+
+  let formElem = e.currentTarget.form;
+  if (formElem) {
+      let data = new FormData(formElem);
+      for (let pair of data.entries()) {
+          form[pair[0]] = pair[1];
+      }
+  }
+
+  cb && cb(e, form)
+  return form;
 }
 
 AuthForm.propTypes = {
@@ -38,22 +53,10 @@ AuthForm.propTypes = {
 };
 AuthForm.defaultProps = {
   isAuth: false,
-  handleSignIn: (e) => {
-    /* ************ for example
-    e.preventDefault();
-
-    let form = e.currentTarget.form;
-    if (form) {
-      let data = new FormData(form);
-      for(let pair of data.entries()) {
-        console.log(pair[0]+ ': '+ pair[1]);
-      }
-    }
-   */
-  },
-  handleSignUp: (e) => {},
-  handleForgotPass: (e) => {},
-  handleSignOut: (e) => {}
+  handleSignIn: (e, formData) => {},
+  handleSignUp: (e, formData) => {},
+  handleForgotPass: (e, formData) => {},
+  handleSignOut: (e, formData) => {}
 };
 
 export default AuthForm;
