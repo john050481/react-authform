@@ -1,6 +1,6 @@
 {
   "name": "@john0504/react-authform",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "react-authform react auth form",
   "main": "lib/index.js",
   "module": "es/index.js",
