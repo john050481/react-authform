@@ -20,7 +20,7 @@ import {AuthForm} from "@john0504/react-authform";
 ```
 # Основные моменты
 ## Основной компонент ```AuthForm```:
-В Ваши колбеки (handleSignIn, handleSignUp, ...) передается объект события и данные формы: callbacl(event, formData)
+В Ваши колбеки (handleSignIn, handleSignUp, ...) передается объект события и данные формы: handleSignIn(event, formData)...
 ```jsx
 <AuthForm 
   isAuth={isAuth}
