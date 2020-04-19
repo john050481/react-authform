@@ -20,6 +20,7 @@ import {AuthForm} from "@john0504/react-authform";
 ```
 # Основные моменты
 ## Основной компонент ```AuthForm```:
+В Ваши колбеки (handleSignIn, handleSignUp, ...) передается объект события и данные формы: callbacl(event, formData)
 ```jsx
 <AuthForm 
   isAuth={isAuth}
@@ -49,16 +50,9 @@ AuthForm.propTypes = {
 ```
 В качестве примера коллбэк ```handleSignIn```, который выдает пары (ключ: значение) инпутов формы:
 ```js
-handleSignIn: (e) => {
+handleSignIn: (e, formData) => {
   e.preventDefault();
-
-  let form = e.currentTarget.form;
-  if (form) {
-    let data = new FormData(form);
-    for(let pair of data.entries()) {
-      console.log(pair[0]+ ': '+ pair[1]);
-    }
-  }
+  console.log(formData);
 }
 //Выведет в консоли то, что ввел пользователь:
 email: email@corp.ru
