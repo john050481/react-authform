@@ -28,13 +28,13 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "nwb": "0.24.x"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.3",
     "@testing-library/user-event": "^10.0.2",
-    "nwb": "0.24.x"
   },
   "author": "",
   "homepage": "",
